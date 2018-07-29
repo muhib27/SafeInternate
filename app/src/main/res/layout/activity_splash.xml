@@ -26,10 +26,12 @@
         android:layout_above="@+id/bottomLine">
 
         <ImageView
+            android:layout_alignParentLeft="true"
             android:layout_width="100dp"
             android:layout_height="50dp" />
 
         <ImageView
+            android:layout_alignParentRight="true"
             android:layout_width="100dp"
             android:layout_height="50dp" />
 
