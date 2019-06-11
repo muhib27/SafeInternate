@@ -18,8 +18,19 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
+        android:fitsSystemWindows="false"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer" >
+        <View
+            android:background="@color/appColor"
+            android:layout_gravity="end"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <View
+            android:background="@color/appColor"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
