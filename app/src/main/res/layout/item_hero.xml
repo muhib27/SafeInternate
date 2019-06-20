@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/poster_hero_height"
+    android:layout_marginBottom="@dimen/activity_margin_content"
+    android:layout_marginEnd="@dimen/activity_margin_half"
+    android:layout_marginLeft="@dimen/activity_margin_half"
+    android:layout_marginRight="@dimen/activity_margin_half"
+    android:layout_marginStart="@dimen/activity_margin_half"
+    app:cardBackgroundColor="@color/appColor"
+    app:cardCornerRadius="3dp"
+    app:cardPreventCornerOverlap="false">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/appColor"/>
+    <TextView
+        android:layout_gravity="center"
+        android:text="Text"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:alpha="0.7"-->
+        <!--android:background="@drawable/scrim"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="@dimen/activity_margin">-->
+
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/movie_title"-->
+                <!--style="@style/TextAppearance.AppCompat.Subhead.Inverse"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="2"-->
+                <!--tools:text="Doctor Who : The Day of the Doctor"/>-->
+
+        <!--&lt;!&ndash;android:maxLength="40"&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/movie_year"&ndash;&gt;-->
+                <!--&lt;!&ndash;style="@style/TextAppearance.AppCompat.Caption"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:alpha="0.4"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="end"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:maxLines="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@android:color/white"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                <!--&lt;!&ndash;tools:text="2009 | EN"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/movie_desc"-->
+            <!--style="@style/TextAppearance.AppCompat.Caption"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/activity_margin_half"-->
+            <!--android:alpha="0.7"-->
+            <!--android:ellipsize="end"-->
+            <!--android:maxLines="2"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--tools:text="Nowadays, user engagement is considered one of the most important metrics for the success of your app"/>-->
+
+    <!--</LinearLayout>-->
+
+</android.support.v7.widget.CardView>

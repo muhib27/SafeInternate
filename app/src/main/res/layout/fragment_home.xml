@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/margin_5dp"
+                android:paddingRight="@dimen/margin_5dp">
+                <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/card_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/margin_150dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--card_view:cardBackgroundColor="@android:color/transparent"-->
+                <!--card_view:cardCornerRadius="0dp"-->
+                <!--card_view:cardElevation="5dp"-->
+                <!--android:paddingRight="@dimen/margin_10dp"-->
+                <!--android:paddingLeft="@dimen/margin_10dp"-->
+                <!--card_view:cardUseCompatPadding="true">-->
+
+                <!--</android.support.v7.widget.CardView>-->
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_150dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="2dp">
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_text_bg"
+                android:paddingLeft="@dimen/margin_20dp"
+                android:fontFamily="@font/my_custom_font"
+                android:paddingRight="@dimen/margin_20dp"
+                android:paddingBottom="@dimen/margin_5dp"
+                android:text="@string/tips_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_20sp" />
+
+        </RelativeLayout>
+        <!--</LinearLayout>-->
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ll"
+            android:layout_below="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginBottom="@dimen/margin_5dp">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@android:color/transparent"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:alpha="0.4"-->
+                <!--android:background="@drawable/scrim"/>-->
+
+
+            <View
+                android:gravity="center"
+                android:orientation="vertical"
+                android:alpha=".4"
+                android:background="@drawable/scrim"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:fontFamily="@font/my_custom_font"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="57dp"
+                android:id="@+id/title_vh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_text_bg"
+                android:paddingLeft="@dimen/margin_20dp"
+                android:paddingRight="@dimen/margin_20dp"
+                android:paddingBottom="@dimen/margin_5dp"
+                android:text="@string/tips_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_17sp" />
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/my_custom_font"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin_5dp"
+                android:textSize="@dimen/size_20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:text="@string/title_vh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_20dp"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/transparent">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@null"-->
+        <!--android:scrollbars="vertical"-->
+        <!--app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_below="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="@dimen/margin_5dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/poster_hero_height"
+                android:layout_marginStart="@dimen/activity_margin_half"
+                android:layout_marginLeft="@dimen/activity_margin_half"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginEnd="@dimen/activity_margin_half"
+                android:layout_marginRight="@dimen/activity_margin_half"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                app:cardBackgroundColor="@color/appColorTrans"
+                app:cardCornerRadius="3dp"
+                android:layout_below="@+id/ll1"
+                app:cardPreventCornerOverlap="false">
+
+                <ImageView
+                    android:id="@+id/movie_poster1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:background="@color/appColor" />
+            </android.support.v7.widget.CardView>
+        <!--</LinearLayout>-->
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/cardView2"
+            android:layout_below="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/poster_hero_height"
+            android:layout_marginStart="@dimen/activity_margin_half"
+            android:layout_marginLeft="@dimen/activity_margin_half"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/activity_margin_half"
+            android:layout_marginRight="@dimen/activity_margin_half"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="3dp"
+            app:cardPreventCornerOverlap="false">
+            <!--<com.smarteist.autoimageslider.SliderView-->
+                <!--android:id="@+id/imageSlider"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+                <!--app:sliderAnimationDuration="600"-->
+                <!--app:sliderAutoCycleDirection="back_and_forth"-->
+                <!--app:sliderAutoCycleEnabled="true"-->
+                <!--app:sliderCircularHandlerEnabled="true"-->
+                <!--app:sliderIndicatorAnimationDuration="600"-->
+                <!--app:sliderIndicatorGravity="center_horizontal|bottom"-->
+                <!--app:sliderIndicatorMargin="15dp"-->
+                <!--app:sliderIndicatorOrientation="horizontal"-->
+                <!--app:sliderIndicatorPadding="3dp"-->
+                <!--app:sliderIndicatorRadius="2dp"-->
+                <!--app:sliderIndicatorSelectedColor="#5A5A5A"-->
+                <!--app:sliderIndicatorUnselectedColor="#FFF"-->
+                <!--app:sliderScrollTimeInSec="1"-->
+                <!--app:sliderStartAutoCycle="true" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/movie_poster2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:scaleType="fitXY"-->
+                <!--tools:background="@android:color/transparent" />-->
+
+            <ss.com.bannerslider.Slider
+                app:slider_loopSlides="true"
+                app:slider_interval="5000"
+                android:id="@+id/banner_slider1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_below="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/cardView3"
+            android:layout_below="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/poster_hero_height"
+            android:layout_marginStart="@dimen/activity_margin_half"
+            android:layout_marginLeft="@dimen/activity_margin_half"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/activity_margin_half"
+            android:layout_marginRight="@dimen/activity_margin_half"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="3dp"
+            app:cardPreventCornerOverlap="false">
+
+            <ImageView
+                android:id="@+id/movie_poster3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                tools:background="@android:color/transparent" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_below="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100dp"
+            android:background="@android:color/transparent">
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+</ScrollView>

@@ -6,11 +6,32 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+    <dimen name="margin_150dp">150dp</dimen>
     <dimen name="margin_100dp">100dp</dimen>
     <dimen name="margin_50dp">50dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
     <dimen name="margin_30dp">30dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_5dp">5dp</dimen>
+
+
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin2">2dp</dimen>
+    <dimen name="margin4">4dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+
+    <dimen name="poster_hero_height">192dp</dimen>
+
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_margin_quarter">4dp</dimen>
+    <dimen name="activity_margin_content">24dp</dimen>
+    <dimen name="activity_margin_half">8dp</dimen>
+
+    <dimen name="size_15sp">15sp</dimen>
+    <dimen name="size_16sp">16sp</dimen>
+    <dimen name="size_17sp">17sp</dimen>
+    <dimen name="size_20sp">20sp</dimen>
+    <dimen name="size_18sp">18sp</dimen>
 </resources>

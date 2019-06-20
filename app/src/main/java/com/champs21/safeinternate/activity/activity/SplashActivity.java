@@ -1,4 +1,4 @@
-package com.champs21.safeinternate.activity;
+package com.champs21.safeinternate.activity.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;

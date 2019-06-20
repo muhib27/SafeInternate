@@ -5,4 +5,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="working_progress">Working progress…</string>
+    <string name="loading">loading…</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="tips_title">আজকের টিপস</string>
+    <string name="title_vh">ইন্টারনেট সচেতনতামূলক দীর্ঘমেয়াদী উদ্যোগ জরুরী</string>
 </resources>

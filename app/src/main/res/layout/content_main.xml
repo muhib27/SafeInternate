@@ -4,14 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.champs21.safeinternate.activity.MainActivity"
+    tools:context="com.champs21.safeinternate.activity.activity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <View
-        android:layout_alignParentBottom="true"
-        android:background="@color/appColor"
+    <FrameLayout
+        android:id="@+id/mainContainer"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_5dp"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_ll"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <!--<android.support.design.widget.BottomNavigationView-->
+            <!--android:id="@+id/navigation"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/mainContainer"-->
+            <!--android:layout_marginStart="0dp"-->
+            <!--android:layout_marginEnd="0dp"-->
+            <!--app:itemIconTint="@drawable/bottom_navigation_selector"-->
+            <!--app:menu="@menu/navigation" />-->
+        <com.roughike.bottombar.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            app:bb_tabXmlResource="@xml/bottombar_tabs_color_changing"
+            app:itemIconTint="@drawable/bottom_navigation_selector"
+            app:bb_inActiveTabColor="@color/colorPrimary"
+            app:bb_activeTabColor="@color/colorAccent"
+            app:bb_titleTextAppearance="@style/CustomTitleTextAppearance"
+            app:bb_behavior="shifting" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/appColor" />
+    </LinearLayout>
 
 </RelativeLayout>
+
+    <!--android:background="?android:attr/windowBackground"-->
+
