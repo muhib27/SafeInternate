@@ -18,4 +18,17 @@
 
     <string name="tips_title">আজকের টিপস</string>
     <string name="title_vh">ইন্টারনেট সচেতনতামূলক দীর্ঘমেয়াদী উদ্যোগ জরুরী</string>
+
+    <string name="new_event">নতুন ইভেন্ট</string>
+
+    <string name="demo_school_name">স্কলাস্টিকা উত্তরা ক্যাম্পাস</string>
+    <string name="demo_date">মার্চ ১১, ২০১৯</string>
+    <string name="demo_v_title">ইন্টারনেট নিয়ে বাস্তব ঘটনাবলী : ১</string>
+
+    <string name="new_video">নতুন ভিডিও</string>
+
+    <string name="top_tips">কখনই কাছের বন্ধুকেও আপনার পাসওয়ার্ডটি বলবেন না | সব ধরনের একাউন্ট এ একই পাসওয়ার্ড ব্যবহার থেকে বিরত থাকুন |</string>
+
+
+
 </resources>

@@ -75,10 +75,10 @@ public class EventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 viewHolder = new MovieVH(viewItem);
                 break;
 
-            case HERO:
-                View viewHero = inflater.inflate(R.layout.item_hero, parent, false);
-                viewHolder = new HeroVH(viewHero);
-                break;
+//            case HERO:
+//                View viewHero = inflater.inflate(R.layout.item_hero, parent, false);
+//                viewHolder = new HeroVH(viewHero);
+//                break;
         }
         return viewHolder;
     }
@@ -87,13 +87,14 @@ public class EventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         Item result = mValues.get(position);
         switch (getItemViewType(position)) {
-            case HERO:
-                final HeroVH topItem = (HeroVH) viewHolder;
-                topItem.title.setText(result.getText());
-                break;
+//            case HERO:
+//                final HeroVH topItem = (HeroVH) viewHolder;
+//                topItem.title.setText(result.getText());
+//                break;
             case ITEM:
                 final MovieVH itemHolder = (MovieVH) viewHolder;
                 itemHolder.title.setText(result.getText());
+                itemHolder.date.setText(result.getDate());
 
                 break;
         }
@@ -124,7 +125,7 @@ public class EventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     protected class MovieVH extends RecyclerView.ViewHolder {
         private TextView title;
-        private TextView mMovieDesc;
+        private TextView date;
         private TextView mYear; // displays "year | language"
         private ImageView mPosterImg;
         private ProgressBar mProgress;
@@ -135,6 +136,7 @@ public class EventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             super(itemView);
 
             title = itemView.findViewById(R.id.textView);
+            date = itemView.findViewById(R.id.date);
 
         }
     }

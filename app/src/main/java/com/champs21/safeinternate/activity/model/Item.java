@@ -5,12 +5,12 @@ public class Item {
 
     public String text;
     public int drawable;
-    public String color;
+    public String date;
 
-    public Item(String text, int drawable, String color ) {
+    public Item(String text, int drawable, String date ) {
         this.text = text;
         this.drawable = drawable;
-        this.color = color;
+        this.date = date;
     }
 
     public String getText() {
@@ -29,11 +29,11 @@ public class Item {
         this.drawable = drawable;
     }
 
-    public String getColor() {
-        return color;
+    public String getDate() {
+        return date;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setDate(String date) {
+        this.date = date;
     }
 }

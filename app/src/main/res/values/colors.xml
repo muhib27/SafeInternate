@@ -11,4 +11,6 @@
     <color name="hamburgerBlack">#000000</color>
     <color name="appColor">#1db6ea</color>
     <color name="appColorTrans">#401db6ea</color>
+
+    <color name="bg_title">#66999999</color>
 </resources>

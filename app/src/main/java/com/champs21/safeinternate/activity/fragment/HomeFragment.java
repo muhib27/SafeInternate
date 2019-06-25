@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,14 +22,17 @@ import com.champs21.safeinternate.activity.adapter.HomeAdapter;
 
 import com.champs21.safeinternate.activity.model.Item;
 import com.champs21.safeinternate.activity.model.SafeInternetNews;
-import com.champs21.safeinternate.activity.utils.MainSliderAdapter;
-import com.champs21.safeinternate.activity.utils.PicassoImageLoadingService;
+import com.champs21.safeinternate.activity.utils.AutoScrollPagerFragment;
+import com.champs21.safeinternate.activity.utils.TextFragment;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+//import com.champs21.safeinternate.activity.utils.MainSliderAdapter;
+//import com.champs21.safeinternate.activity.utils.PicassoImageLoadingService;
 
 
 import java.util.ArrayList;
 
-import ss.com.bannerslider.Slider;
-import ss.com.bannerslider.event.OnSlideClickListener;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +41,9 @@ public class HomeFragment extends BaseFragment implements HomeAdapter.ItemListen
     private RecyclerView recyclerView, recyclerView1;
     private ArrayList<SafeInternetNews> safeInternetNews;
     private ArrayList<Item> arrayList1;
-    private Slider slider;
+
+    private ViewPager contentPager;
+//    private Slider slider;
 
 
     public HomeFragment() {
@@ -58,6 +65,25 @@ public class HomeFragment extends BaseFragment implements HomeAdapter.ItemListen
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        ImageLoaderConfiguration configuration = new ImageLoaderConfiguration.Builder(getActivity()).build();
+        ImageLoader.getInstance().init(configuration);
+
+        contentPager = view.findViewById(R.id.pager);
+        contentPager.setOffscreenPageLimit(2);
+        contentPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+            @Override
+            public Fragment getItem(int i) {
+                if (i == 0) {
+                    return new AutoScrollPagerFragment();
+                }
+                return TextFragment.newInstance("Fragment " + i);
+            }
+
+            @Override
+            public int getCount() {
+                return 3;
+            }
+        });
 //        SliderView sliderView = view.findViewById(R.id.imageSlider);
 //
 //        SliderAdapterExample adapters = new SliderAdapterExample(getContext());
@@ -72,17 +98,17 @@ public class HomeFragment extends BaseFragment implements HomeAdapter.ItemListen
 //        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
 //        sliderView.startAutoCycle();
 
-        Slider.init(new PicassoImageLoadingService(getActivity()));
-
-        slider = view.findViewById(R.id.banner_slider1);
-        slider.setAdapter(new MainSliderAdapter());
-
-        slider.setOnSlideClickListener(new OnSlideClickListener() {
-            @Override
-            public void onSlideClick(int position) {
-                Toast.makeText(getActivity(),"ff  "+position, Toast.LENGTH_SHORT).show();
-            }
-        });
+//        Slider.init(new PicassoImageLoadingService(getActivity()));
+//
+//        slider = view.findViewById(R.id.banner_slider1);
+//        slider.setAdapter(new MainSliderAdapter());
+//
+//        slider.setOnSlideClickListener(new OnSlideClickListener() {
+//            @Override
+//            public void onSlideClick(int position) {
+//                Toast.makeText(getActivity(),"ff  "+position, Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
 
@@ -108,10 +134,10 @@ public class HomeFragment extends BaseFragment implements HomeAdapter.ItemListen
         recyclerView1 = (RecyclerView) view.findViewById(R.id.recyclerView1);
         arrayList1 = new ArrayList<>();
 
-        arrayList1.add(new Item("Item 1", R.drawable.battle, "#40ffffff"));
-        arrayList1.add(new Item("Item 2", R.drawable.beer, "#3E51B1"));
-        arrayList1.add(new Item("Item 3", R.drawable.ferrari, "#673BB7"));
-        arrayList1.add(new Item("Item 4", R.drawable.jetpack_joyride, "#4BAA50"));
+        arrayList1.add(new Item("স্কলাস্টিকা উত্তরা ক্যাম্পাস", R.drawable.battle, "মার্চ ১১, ২০১৯"));
+        arrayList1.add(new Item("স্কলাস্টিকা উত্তরা ক্যাম্পাস", R.drawable.beer, "মার্চ ১১, ২০১৯"));
+        arrayList1.add(new Item("স্কলাস্টিকা উত্তরা ক্যাম্পাস", R.drawable.ferrari, "মার্চ ১১, ২০১৯"));
+        arrayList1.add(new Item("স্কলাস্টিকা উত্তরা ক্যাম্পাস", R.drawable.jetpack_joyride, "মার্চ ১১, ২০১৯"));
 
         EventAdapter eventAdapter = new EventAdapter(getActivity(), arrayList1, this);
         recyclerView1.setAdapter(eventAdapter);
